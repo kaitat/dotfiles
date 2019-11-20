@@ -201,13 +201,22 @@ alias dc='docker-compose'
 #sales
 #*********************
 #起動
-alias dstartsales='docker-compose start sales'
+alias dstartsales='docker-compose start sales redis && docker attach sales'
 #停止
-alias dstopsales='docker-compose stop sales'
+alias dstopsales='docker-compose stop sales redis'
 #binding.pry
 alias das='docker attach sales'
 #rake task
 alias rtsales='docker exec -it sales bundle exec rake routes'
+#yarn start
+alias salesyarn='yarn run start:sales:dev'
+# adminサイトの起動
+alias adminstart='cd admin && yarn run dev:serve'
+# rails c
+alias dcsalesrc='docker exec -it sales bundle exec rails c'
+# robocop
+alias rubosales='docker exec sales bundle exec rubocup'
+
 
 
 
@@ -254,8 +263,7 @@ alias ll='ls -alFG'
 #ディレクトリに移動
 alias cdrails='cd ~/rails-practice'
 alias cdreact='cd ~/JS-practice'
-alias cdquiz='cd ~/rails-practice/myapp/question/quiz'
-alias cdgwithme='cd ~/rails-practice/myapp/Gwithme/Gwithme'
+alias cdma='cd ~/rails-practice/myapp/ma'
 alias cdsales='cd ~/baseconnect/projects/sales/sales'
 alias cdbc='cd ~/baseconnect/projects/Baseconnect/Baseconnect'
 #短縮
