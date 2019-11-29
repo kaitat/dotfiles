@@ -1,1 +1,0 @@
-/Users/miyazakikaito/.dotfiles/config/fish/completions/fisher.fish

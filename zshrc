@@ -273,9 +273,6 @@ alias cdsales='cd ~/baseconnect/projects/sales/sales'
 alias cdbc='cd ~/baseconnect/projects/Baseconnect/Baseconnect'
 #短縮
 alias rs='rails s'
-# vimrc
-alias vimrc='vim ~/.vimrc'
-alias bashrc='vim ~/.bashrc'
 # teypescript on react
 alias npmts='npx create-react-app --typescript'
 alias yadt='yarn add --dev typescript'
@@ -285,8 +282,6 @@ alias yrti='yarn run tsc --init'
 alias -g G='| grep'
 alias -g GI='| grep -ri'
 
-# エイリアス
-alias zshrc='vim ~/.zshrc'
 # historyに日付を表示
 alias h='fc -lt '%F %T' 1'
 alias back='pushd'

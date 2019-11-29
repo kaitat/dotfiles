@@ -1,1 +1,0 @@
-/Users/miyazakikaito/.dotfiles/config/fish/config.fish
