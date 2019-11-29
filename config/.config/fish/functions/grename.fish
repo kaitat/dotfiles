@@ -1,0 +1,1 @@
+/Users/miyazakikaito/.dotfiles/config/fish/functions/grename.fish

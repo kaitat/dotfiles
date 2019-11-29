@@ -8,7 +8,12 @@ setopt nonomatch
 export LANG=ja_JP.UTF-8
 
 # パスを追加したい場合
-# export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export XDG_CONFIG_HOME=/Users/miyazakikaito/.config
+export XDG_CACHE_HOME=/Users/miyazakikaito/.cache
 
 # 色を使用
 autoload -Uz colors
@@ -104,7 +109,7 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 # bundle
 #**************************************************:
 
-alias bi='bundle install --path vendor/bundle --jobs=4'
+alias -g bi='bundle install --path vendor/bundle --jobs=4'
 alias vb='echo "/vendor/bundle" >> .gitignore'
 
 #**************************************************:
@@ -263,7 +268,7 @@ alias ll='ls -alFG'
 #ディレクトリに移動
 alias cdrails='cd ~/rails-practice'
 alias cdreact='cd ~/JS-practice'
-alias cdma='cd ~/rails-practice/myapp/ma'
+alias cdguru='cd ~/rails-practice/myapp/guru'
 alias cdsales='cd ~/baseconnect/projects/sales/sales'
 alias cdbc='cd ~/baseconnect/projects/Baseconnect/Baseconnect'
 #短縮
@@ -293,3 +298,12 @@ alias diff='diff -U1'
 
 # ++++++++++++++++++++++++++++++++++
 
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fvim() {
+  files=$(git ls-files) &&
+  selected_files=$(echo "$files" | fzf -m --preview 'head -100 {}') &&
+  vim $selected_files
+}
