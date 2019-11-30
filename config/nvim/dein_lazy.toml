@@ -50,3 +50,13 @@ on_i = 1
 [[plugins]]
 repo = 'herringtondarkholme/yats.vim'
 on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']
+
+# Rubyのend補完
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_i = 1
+on_ft = ['ruby']
+
+# Rubyのメソッドの定義元にジャンプ
+[[plugins]]
+repo = 'szw/vim-tags'
