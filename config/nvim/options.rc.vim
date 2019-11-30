@@ -86,7 +86,7 @@ set matchtime=3
 set number
 
 " 行番号を相対値で表示
-set relativenumber
+" set relativenumber
 
 " コマンド実行中は再描画しない
 set lazyredraw
@@ -95,7 +95,7 @@ set lazyredraw
 set ttyfast
 
 " tabの幅
-set tabstop=4
+set tabstop=2
 
 " tabをスペースにする
 set expandtab
@@ -157,3 +157,13 @@ set fileformats=unix
 
 " undofile
 set undofile
+
+" color
+set termguicolors
+syntax on
+let ayucolor="dark"
+colorscheme ayu
+
+" タブライン表示
+set showtabline=2
+

@@ -16,15 +16,7 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
-[[plugins]]
-repo = 'jacoborus/tender.vim'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  source ~/.config/nvim/plugins/nerdtree.rc.vim
-'''
-
+# 検索
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
@@ -35,6 +27,7 @@ hook_add = '''
   source ~/.config/nvim/plugins/fzf.rc.vim
 '''
 
+# 初期画面の設定
 [[plugins]]
 repo = 'mhinz/vim-startify'
 hook_add = '''
@@ -42,27 +35,77 @@ hook_add = '''
 '''
 
 
-# tree view
+#tree
+#[[plugins]]
+#repo ="kristijanhusak/defx-git"
+
+#[[plugins]]
+#repo ="kristijanhusak/defx-icons"
+
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 hook_add = '''
   source ~/.config/nvim/plugins/defx.rc.vim
 '''
+
+# ステータスバー設定(できていない?)
+#[[plugins]]
+#repo = 'vim-airline/vim-airline'
+#hood_add = '''
+#  source ~/.config/nvim/plugins/vim-airline.rc.vim
+#'''
+
+#[[plugins]]
+#repo = 'vim-airline/vim-airline-themes'
+
+# 行番号の隣にgitの更新表示(色を変えたいが変更できず)
 [[plugins]]
-repo = 'kristijanhusak/defx-icons'
+repo = 'airblade/vim-gitgutter'
+ hook_add = '''
+  set updatetime=250
+  let g:gitgutter_sign_added = '●'
+  let g:gitgutter_sign_modified = '●'
+  let g:gitgutter_sign_removed = '●'
+  let g:gitgutter_sign_modified_removed = "●"
+'''
+#  autocmd Vimenter,Colorscheme * :hi GitGutterAddLine ctermfg=none ctermbg=17
+#  autocmd Vimenter,Colorscheme * :hi GitGutterChangeLine ctermfg=none ctermbg=53
+#  autocmd Vimenter,Colorscheme * :hi GitGutterDeleteLine ctermfg=none ctermbg=52
+#  autocmd Vimenter,Colorscheme * :hi GitGutterChangeDeleteLine ctermfg=none ctermbg=53
+
+# 色付してくれる
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+# カッコやら、""で囲ってくれる
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# syntax
+[[plugins]]
+repo = 'taichouchou2/html5.vim'
+
 
 [[plugins]]
-repo = 'kristijanhusak/defx-git'
+repo = 'hail2u/vim-css3-syntax'
 
+# インデント追加するつもりだった(動いてない)
+#[[plugins]]
+#repo = 'nathanaelkane/vim-indent-guides'
+#hood_add = '''
+#  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=8
+#  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=0
+#'''
+
+# color theme
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
+repo = 'ayu-theme/ayu-vim'
 hood_add = '''
-  source ~/.config/nvim/plugins/vim-airline.rc.vim
+source ~/.config/nvim/plugins/ayu-vim.rc.vim
 '''
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'tomtom/tcomment_vim'
+hood_add = '''
+  source ~/.config/nvim/plugins/tcomment_vim.rc.vim
+'''

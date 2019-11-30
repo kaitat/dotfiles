@@ -40,3 +40,5 @@ map <silent> [Tag]l :tabnext<CR>
 " th 前のタブ
 map <silent> [Tag]h :tabprevious<CR>
 
+" 無効化
+nnoremap <C-j> j
