@@ -287,7 +287,8 @@ alias h='fc -lt '%F %T' 1'
 alias back='pushd'
 alias diff='diff -U1'
 
-
+# nvim 開かせる
+alias vi='nvim'
 
 
 
