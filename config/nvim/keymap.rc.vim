@@ -1,3 +1,15 @@
+"-------------------------------------------------------------------------------
+" コマンド       ノーマルモード 挿入モード コマンドラインモード ビジュアルモード
+" map/noremap           @            -              -                  @
+" nmap/nnoremap         @            -              -                  -
+" imap/inoremap         -            @              -                  -
+" cmap/cnoremap         -            -              @                  -
+" vmap/vnoremap         -            -              -                  @
+" map!/noremap!         -            @              @                  -
+"-------------------------------------------------------------------------------
+
+
+
 "" normal モード
 " Shift + 矢印でウィンドウサイズを変更
 nnoremap <S-Left>  <C-w><
@@ -39,6 +51,10 @@ map <silent> [Tag]n :tabnew<CR>
 map <silent> [Tag]l :tabnext<CR>
 " th 前のタブ
 map <silent> [Tag]h :tabprevious<CR>
+
+"" terminalモード
+" <ESC>: terminalモードからコマンドモードに変更
+tnoremap <silent> <ESC> <C-\><C-n>
 
 " 無効化
 nnoremap <C-j> j

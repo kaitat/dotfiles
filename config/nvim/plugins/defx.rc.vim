@@ -1,11 +1,6 @@
 nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 autocmd FileType defx call s:defx_my_settings()
   function! s:defx_my_settings() abort
-    call defx#custom#column('icon', {
-      \ 'directory_icon': '🍎',
-      \ 'opened_icon': '🍏',
-      \ 'root_icon': ' ',
-      \ })
     " Define mappings
     " 【o】 ファイルを開く
     nnoremap <silent><buffer><expr> <CR> defx#do_action('open')
