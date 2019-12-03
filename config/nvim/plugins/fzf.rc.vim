@@ -2,8 +2,6 @@
   command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%', 'ctrl-p'), <bang>0)
   nnoremap <Space>f :Files<CR>
-  nnoremap <Space>f :FZF<CR>
-  nnoremap <Space>b :Buffers<CR>
   nnoremap <Space>b :Buffers<CR>
   nnoremap <Space>l :BLines<CR>
   nnoremap <Space>gf :GFiles<CR>
