@@ -81,14 +81,14 @@ hook_source = '''
 '''
 
 # ステータスバー設定(できていない?)
-#[[plugins]]
-#repo = 'vim-airline/vim-airline'
-#hood_add = '''
-#  source ~/.config/nvim/plugins/vim-airline.rc.vim
-#'''
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hood_add = '''
+ source ~/.config/nvim/plugins/vim-airline.rc.vim
+'''
 
-#[[plugins]]
-#repo = 'vim-airline/vim-airline-themes'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 # 行番号の隣にgitの更新表示(色を変えたいが変更できず)
 [[plugins]]
