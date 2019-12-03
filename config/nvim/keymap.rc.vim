@@ -26,8 +26,8 @@ nnoremap <Space>eee :e<CR>
 nnoremap <Space>wq :wq<CR>
 nnoremap <Space>nn :noh<CR>
 " split
-nnoremap <Space>s :<C-u>split<CR>
-nnoremap <Space>v :<C-u>vsplit<CR>
+nnoremap <Space>s :<C-u>new<CR>
+nnoremap <Space>v :<C-u>vnew<CR>
 " Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
