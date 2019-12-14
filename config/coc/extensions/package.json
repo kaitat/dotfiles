@@ -1,1 +1,9 @@
-{"dependencies":{}}
+{
+  "dependencies": {
+    "coc-docker": ">=0.2.1",
+    "coc-solargraph": ">=1.1.3",
+    "coc-syntax": ">=1.2.4",
+    "coc-tslint": ">=1.0.17",
+    "coc-tsserver": ">=1.4.9"
+  }
+}

@@ -1,11 +1,11 @@
 # 補完
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_event = 'InsertCharPre'
-hook_add = '''
-  source ~/.config/nvim/plugins/deoplete.rc.vim
-'''
-on_i = 1
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# on_event = 'InsertCharPre'
+# hook_add = '''
+#   source ~/.config/nvim/plugins/deoplete.rc.vim
+# '''
+# on_i = 1
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
@@ -30,8 +30,10 @@ on_ft = ['ruby']
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
+rev = 'release'
 merged = '0'
-on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
+on_i = 1
+# on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
 hook_add = '''
   source ~/.config/nvim/plugins/coc.nvim.rc.vim
 '''
