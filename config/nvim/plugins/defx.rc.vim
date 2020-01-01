@@ -22,7 +22,7 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> d defx#do_action('remove')
     " 【r】 ファイル名を変更する
     nnoremap <silent><buffer><expr> r defx#do_action('rename')
-    " 【t】 ツリーを表示/非表示する
+    " 【o】 ツリーを表示/非表示する
     nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
     " 【x】 ファイルを実行する
     nnoremap <silent><buffer><expr> x defx#do_action('execute_system')

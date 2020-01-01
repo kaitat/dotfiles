@@ -51,9 +51,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo ="kristijanhusak/defx-icons"
-
-[[plugins]]
 repo = 'Shougo/defx.nvim'
 depends = ['defx-icons', 'defx-git']
 hook_add = '''
@@ -79,6 +76,10 @@ hook_source = '''
       \ 'show_ignored_files': 1,
       \ })
 '''
+
+[[plugins]]
+repo ="kristijanhusak/defx-icons"
+
 
 # ステータスバー設定(できていない?)
 [[plugins]]
@@ -141,3 +142,16 @@ repo = 'tomtom/tcomment_vim'
 hood_add = '''
   source ~/.config/nvim/plugins/tcomment_vim.rc.vim
 '''
+
+# coc (lsp)
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+rev = 'release'
+merged = '0'
+on_i = 1
+# on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
+hook_add = '''
+  source ~/.config/nvim/plugins/coc.nvim.rc.vim
+'''
+

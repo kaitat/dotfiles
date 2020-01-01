@@ -180,6 +180,15 @@ alias gfod='git fetch origin develop'
 alias gmod='git merge origin/develop'
 #空コミット
 alias blankco='git commit --allow-empty -m "[ci skip] first commit"'
+#untraced file の削除ファイル確認
+alias gcn='git clean -n'
+#untraced file の削除認
+alias gcf='git clean -f'
+#untraced file の削除ディレクトリ確認
+alias gcnd='git clean -nd'
+#untraced file のディレクトリ削除
+alias gcd='git clean -d'
+alias cod='git checkout develop'
 #**************************************************:
 # docker
 #**************************************************:

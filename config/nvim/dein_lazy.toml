@@ -26,18 +26,6 @@ repo = 'ujihisa/neco-look'
 repo = 'fishbullet/deoplete-ruby'
 on_ft = ['ruby']
 
-# coc (lsp)
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
-rev = 'release'
-merged = '0'
-on_i = 1
-# on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
-hook_add = '''
-  source ~/.config/nvim/plugins/coc.nvim.rc.vim
-'''
-
 # 閉じカッコ
 [[plugins]]
 repo = 'cohama/lexima.vim'
