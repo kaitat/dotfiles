@@ -9,9 +9,12 @@ export LANG=ja_JP.UTF-8
 
 # パスを追加したい場合
 export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 export XDG_CONFIG_HOME=/Users/miyazakikaito/.config
 export XDG_CACHE_HOME=/Users/miyazakikaito/.cache
 
@@ -208,6 +211,8 @@ alias dstart='docker start'
 alias dstop='docker stop'
 #省略
 alias dc='docker-compose'
+#none-image削除
+alias dockerrm='docker images -f 'dangling=true' -q | xargs -n 1 docker rmi'
 
 
 
@@ -252,6 +257,22 @@ alias bcyarn='yarn run build:devlocal'
 alias dcredis='dc up redis'
 #rails c
 alias dcbcrc='docker exec -it baseconnect bundle exec rails c'
+
+
+
+# **************************
+# guru
+# **************************
+#rspec
+alias gurutest='dc run --rm back bundle exec rspec'
+#dc run --rm back を短縮
+alias dcguru='dc run --rm back'
+# rubocop todo に入れる
+alias gururubotodo='dcguru bundle exec rubocop --auto-gen-config'
+# rubocop 
+alias gururubo='dcguru bundle exec rubocop'
+# test
+alias gurutest='dcguru bundle exec rspec'
 
 
 

@@ -16,7 +16,7 @@ nnoremap <S-Left>  <C-w><
 nnoremap <S-Right> <C-w>>
 nnoremap <S-Up>    <C-w>-
 nnoremap <S-Down>  <C-w>+
-nnoremap tig :sp<CR>:term<CR>i tig<CR>
+nnoremap tig :tabnew<CR>:term<CR>i tig<CR>
 " 行番号の相対表示:絶対表示の切り替え
 nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
 " 保存
@@ -32,6 +32,10 @@ nnoremap <Space>v :<C-u>vnew<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <Space>t :tabnew<CR>
+"" バッファ操作
+nnoremap [j :bprev<CR>
+nnoremap [k :bnext<CR>
+nnoremap [bbb :bd!<CR>
 " 移動を直感的に
 nnoremap j gj
 nnoremap k gk

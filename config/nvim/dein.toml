@@ -155,3 +155,9 @@ hook_add = '''
   source ~/.config/nvim/plugins/coc.nvim.rc.vim
 '''
 
+# vim-fugitive(git連携)
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-fugitive.rc.vim
+'''
