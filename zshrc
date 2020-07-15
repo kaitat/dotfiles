@@ -182,7 +182,7 @@ alias gfod='git fetch origin develop'
 #origin develop のマージ
 alias gmod='git merge origin/develop'
 #空コミット
-alias blankco='git commit --allow-empty -m "[ci skip] first commit"'
+alias blankco='git commit --allow-empty -m "first commit"'
 #untraced file の削除ファイル確認
 alias gcn='git clean -n'
 #untraced file の削除認
@@ -213,50 +213,6 @@ alias dstop='docker stop'
 alias dc='docker-compose'
 #none-image削除
 alias dockerrm='docker images -f 'dangling=true' -q | xargs -n 1 docker rmi'
-
-
-
-#*********************
-#sales
-#*********************
-#起動
-alias dstartsales='docker-compose start sales redis && docker attach sales'
-#停止
-alias dstopsales='docker-compose stop sales redis'
-#binding.pry
-alias das='docker attach sales'
-#rake task
-alias rtsales='docker exec -it sales bundle exec rake routes'
-#yarn start
-alias salesyarn='yarn run start:sales:dev'
-# adminサイトの起動
-alias adminstart='cd admin && yarn run dev:serve'
-# rails c
-alias dcsalesrc='docker exec -it sales bundle exec rails c'
-# robocop
-alias rubosales='docker exec sales bundle exec rubocup'
-
-
-
-
-
-#*********************
-#Baseconnect
-#*********************
-#起動
-alias dstartbc='docker-compose start baseconnect && docker attach baseconnect'
-#停止
-alias dstopbc='docker-compose stop baseconnect'
-#rake task
-alias rtbc='docker exec -it baseconnect bundle exec rake routes'
-#binding.pry
-alias dab='docker attach baseconnect'
-#;yarn build
-alias bcyarn='yarn run build:devlocal'
-#redis起動
-alias dcredis='dc up redis'
-#rails c
-alias dcbcrc='docker exec -it baseconnect bundle exec rails c'
 
 
 
@@ -299,6 +255,7 @@ alias ll='ls -alFG'
 alias cdrails='cd ~/rails-practice'
 alias cdreact='cd ~/JS-practice'
 alias cdguru='cd ~/rails-practice/myapp/guru'
+alias cdchoco='~/rails-practice/choco/choco'
 alias cdsales='cd ~/baseconnect/projects/sales/sales'
 alias cdbc='cd ~/baseconnect/projects/Baseconnect/Baseconnect'
 #短縮
