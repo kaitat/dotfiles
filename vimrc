@@ -50,6 +50,8 @@ call plug#begin(s:plugdir)
 	" Plug 'Lokaltog/vim-easymotion' | Plug 'haya14busa/incsearch-easymotion.vim'
 	" fzf
 	Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+	" 初期画面
+  Plug 'mhinz/vim-startify'
 call plug#end()
 
 runtime! config/*.vim
