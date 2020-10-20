@@ -157,7 +157,7 @@ set browsedir=buffer
 set showcmd
 
 " 現在のモードを非表示
-set noshowmode
+"set noshowmode
 
 " viminfoの設定
 set viminfo='50,<1000,s100,\"50
