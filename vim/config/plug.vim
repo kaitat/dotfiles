@@ -177,7 +177,7 @@ let g:startify_list_order = [
         \ ['☺  bookmark:'],
         \ 'bookmarks',
         \ ]
-let g:startify_bookmarks = ["~/.vim/config/plug.vim", "~/.vimrc", "~/.zshrc"]
+let g:startify_bookmarks = ["~/.vim/config/plug.vim", "~/.vimrc", "~/.zshrc", "~/.config/nvim/keymap.rc.vim", "~/.config/nvim/options.rc.vim"]
 
 " ASCII ARTを真ん中寄せする
 function! s:center(lines) abort
