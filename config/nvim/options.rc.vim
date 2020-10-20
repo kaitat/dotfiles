@@ -151,19 +151,30 @@ set showfulltag
 set wildoptions=tagfile
 
 " 文字コード関係
-set fileencoding=utf-8
-set fileencodings=utf-8,cp932,euc-jp,iso-20220-jp,default,latin,sjis
-set fileformats=unix
+set fileencoding=utf-8 fileencodings=utf-8,cp932,euc-jp,iso-20220-jp,default,latin,sjis
+set fileformats=unix,dos,mac
 
 " undofile
 set undofile
 
-" color
-set termguicolors
-syntax on
-let ayucolor="dark"
-colorscheme ayu
-
 " タブライン表示
 set showtabline=2
+
+"bomb作らない
+set nobomb
+
+"キーをspaceに
+let mapleader="\<Space>"
+
+"ステータス常時見せる
+set laststatus=2
+set statusline=%F         " ファイル名表示
+set statusline+=%m        " 変更のチェック表示
+set statusline+=%r        " 読み込み専用かどうか表示 
+set statusline+=%h        " ヘルプページなら[HELP]と表示
+set statusline+=%w\       " プレビューウインドウなら[Prevew]と表示 
+set rulerformat=%40(%1*%=%l,%-(%c%V%)\ %=%t%)%*
+
+" ピープ音停止
+set noerrorbells visualbell t_vb=
 

@@ -275,7 +275,7 @@ alias back='pushd'
 alias diff='diff -U1'
 
 # nvim 開かせる
-alias vi='nvim'
+# alias vi='nvim'
 
 
 
@@ -283,10 +283,11 @@ alias vi='nvim'
 
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fvim() {
   files=$(git ls-files) &&
   selected_files=$(echo "$files" | fzf -m --preview 'head -100 {}') &&
   vim $selected_files
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -8,6 +8,7 @@
 " map!/noremap!         -            @              @                  -
 "-------------------------------------------------------------------------------
 
+""let mapleader="\<Space>"
 
 
 "" normal モード
@@ -44,6 +45,8 @@ nnoremap Y y$
 " move 15 words
 nmap <S-l> 15<Right>
 nmap <S-h> 15<Left>
+" ターミナル
+nn <Leader>term :split<CR>:terminal<CR>
 
 
 "" insertモード
