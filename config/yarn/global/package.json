@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "neovim": "^4.5.0",
-    "react-native-cli": "^2.0.1"
-  }
-}
