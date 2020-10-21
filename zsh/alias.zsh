@@ -17,47 +17,6 @@ alias bcmysql='bundle config --local build.mysql2 "--with-ldflags=-L/usr/local/o
 #**************************************************:
 # git
 #**************************************************:
-
-#チェックアウトする
-function grename() {
-  git branch;
-  read -p "change branch >>" branchname;
-  git checkout ${branchname};
-}
-
-#featureなんちゃらにチェックアウト
-function fcob() {
-  git branch;
-  read -p "feature/miyazaki/xxxxxxxx >>  xxxxxを入力してください" branchname;
-  git checkout -b feature/miyazaki/${branchname};
-}
-
-#remote へ push
-function frp() {
-  git branch;
-  read -p "feature/miyazaki/xxxxxxxxxx >> xxxxxxxを入力してください" branchname
-  git push -u origin feature/miyazaki/${branchname};
-}
-
-function cmt() {
-  git add .;
-  read -p "commit message >>" commitmessage;
-  git commit -m "${commitmessage}";
-}
-
-function first() {
-  git checkout develop;
-  git pull;
-  git branch;
-  read -p "feature/miyazaki/xxxxxxxx >>  branch名を入力してください" branchname;
-  git checkout -b feature/miyazaki/${branchname};
-  blankco;
-  git push -u origin feature/miyazaki/${branchname};
-
-}
-
-
-
 alias pull='git pull'
 alias push='git push'
 alias st='git status'
@@ -117,7 +76,7 @@ alias gurutest='dc run --rm back bundle exec rspec'
 alias dcguru='dc run --rm back'
 # rubocop todo に入れる
 alias gururubotodo='dcguru bundle exec rubocop --auto-gen-config'
-# rubocop 
+# rubocop
 alias gururubo='dcguru bundle exec rubocop'
 # test
 alias gurutest='dcguru bundle exec rspec'
@@ -168,8 +127,5 @@ alias diff='diff -U1'
 
 # nvim 開かせる
 # alias vi='nvim'
-
-
-
 # ++++++++++++++++++++++++++++++++++
 
