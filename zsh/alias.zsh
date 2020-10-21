@@ -13,6 +13,9 @@ alias vb='echo "/vendor/bundle" >> .gitignore'
 
 # 読み込み(rails)
 alias bcmysql='bundle config --local build.mysql2 "--with-ldflags=-L/usr/local/opt/openssl/lib"'
+alias sqlstart='mysql.server start'
+alias sqlstop='mysql.server stop'
+alias sqlstatus='mysql.server status'
 
 #**************************************************:
 # git
