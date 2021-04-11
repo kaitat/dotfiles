@@ -16,45 +16,9 @@ alias bcmysql='bundle config --local build.mysql2 "--with-ldflags=-L/usr/local/o
 alias sqlstart='mysql.server start'
 alias sqlstop='mysql.server stop'
 alias sqlstatus='mysql.server status'
-
-#**************************************************:
-# git
-#**************************************************:
-alias pull='git pull'
-alias push='git push'
-alias st='git status'
-alias stt='git status -uno'
-alias ad='git add .'
-alias cob='git checkout -b'
-alias gris='git reflog --date=local -n 10'
-# ツリー表示
-alias gr='git gr'
-# ステータス変更のあったファイルのみ変更
-alias gdif='git diff --name-only'
-#remoteのブランチの情報を取得
-alias gfod='git fetch origin develop'
-#origin develop のマージ
-alias gmod='git merge origin/develop'
-#空コミット
-alias blankco='git commit --allow-empty -m "first commit"'
-#untraced file の削除ファイル確認
-alias gcn='git clean -n'
-#untraced file の削除認
-alias gcf='git clean -f'
-#untraced file の削除ディレクトリ確認
-alias gcnd='git clean -nd'
-#untraced file のディレクトリ削除
-alias gcd='git clean -d'
-alias cod='git checkout develop'
 #**************************************************:
 # docker
 #**************************************************:
-#rails c
-function dcrc() {
-  read -p "baseconnect or sales?  >>" name;
-  docker exec -it ${name} bundle exec rails c;
-}
-
 #起動中のコンテナ表示
 alias dps='docker ps'
 #全コンテナ表示
@@ -67,22 +31,18 @@ alias dstop='docker stop'
 alias dc='docker-compose'
 #none-image削除
 alias dockerrm='docker images -f 'dangling=true' -q | xargs -n 1 docker rmi'
+#dc run --rm 短縮
+alias dcr='dc run --rm'
 
 
 
 # **************************
-# guru
+# docker
 # **************************
 #rspec
-alias gurutest='dc run --rm back bundle exec rspec'
-#dc run --rm back を短縮
-alias dcguru='dc run --rm back'
-# rubocop todo に入れる
-alias gururubotodo='dcguru bundle exec rubocop --auto-gen-config'
+alias dcrs='dcr app bundle exec rspec'
 # rubocop
-alias gururubo='dcguru bundle exec rubocop'
-# test
-alias gurutest='dcguru bundle exec rspec'
+alias dcrubo='dcr app bundle exec rubocop'
 
 
 
@@ -105,13 +65,6 @@ alias figr='find . -type f | grep'
 alias stgr='find . -type f | xargs grep'
 #lsの進化版
 alias ll='ls -alFG'
-#ディレクトリに移動
-alias cdrails='cd ~/rails-practice'
-alias cdreact='cd ~/JS-practice'
-alias cdguru='cd ~/rails-practice/myapp/guru'
-alias cdchoco='~/rails-practice/choco/choco'
-alias cdsales='cd ~/baseconnect/projects/sales/sales'
-alias cdbc='cd ~/baseconnect/projects/Baseconnect/Baseconnect'
 #短縮
 alias rs='rails s'
 # teypescript on react
@@ -127,8 +80,17 @@ alias -g GI='| grep -ri'
 alias h='fc -lt '%F %T' 1'
 alias back='pushd'
 alias diff='diff -U1'
+alias dump='dcr app pg_restore --verbose --clean --no-acl --no-owner -h db -U postgres -d myapp_development latest.dump'
+
+# ssh
+alias sshcent7='ssh kaito@192.168.3.21'
 
 # nvim 開かせる
 # alias vi='nvim'
 # ++++++++++++++++++++++++++++++++++
 
+
+#**************************************************:
+# awk
+#**************************************************:
+# alias awkspace='awk -v IFS=' ' -v OFS=',' '{$1=$1;print $0}''

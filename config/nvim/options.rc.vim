@@ -10,6 +10,14 @@ set sidescrolloff=6
 
 " バックアップを作成しない
 set nobackup
+" undoファイル出力無効
+set noundofile
+" swpファイル出力先
+set directory=~/undofile
+" バックアップファイル出力先
+set backupdir=~/undofile
+" undoファイル出力先
+set undodir=~/undofile
 
 " バックスペースでなんでも消せるように
 set backspace=indent,eol,start
@@ -178,3 +186,5 @@ set rulerformat=%40(%1*%=%l,%-(%c%V%)\ %=%t%)%*
 " ピープ音停止
 set noerrorbells visualbell t_vb=
 
+" 検索でカレント以下にする
+set path+=$PWD/**

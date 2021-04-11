@@ -23,7 +23,7 @@ export LANG=ja_JP.UTF-8
 # パスを追加したい場合
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="$HOME/.anyenv/bin:$PATH"
 export XDG_CONFIG_HOME=/Users/miyazakikaito/.config
 export XDG_CACHE_HOME=/Users/miyazakikaito/.cache
@@ -125,3 +125,6 @@ fvim() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

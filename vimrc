@@ -52,6 +52,9 @@ call plug#begin(s:plugdir)
 	Plug 'junegunn/fzf.vim' | Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 	" 初期画面
   Plug 'mhinz/vim-startify'
+	Plug 'twitvim/twitvim'
+
+
 call plug#end()
 
 runtime! config/*.vim

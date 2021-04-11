@@ -231,3 +231,17 @@ let g:startify_custom_header = s:center([
     \ '                                 ▒▒▒▓██▓',
     \ '                                   ▒█▓',
     \ ])
+
+" twivim
+let twitvim_browser_cmd = 'open' " for Mac
+let twitvim_force_ssl = 1
+let twitvim_count = 40
+nnoremap ,tp :<C-u>PosttoTwitter<CR>
+nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>k
+nnoremap ,tr :<C-u>RepliesTwitter<CR><C-w>k
+nnoremap ,tn :<C-u>NextTwitter<CR>
+nnoremap ,tb :<C-u>PreviousTwitter<CR>
+autocmd FileType twitvim call s:twitvim_my_settings()
+function! s:twitvim_my_settings()
+  set nowrap
+endfunction
