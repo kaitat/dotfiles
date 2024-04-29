@@ -1,0 +1,6 @@
+{
+  "tmux": "~/.config/tmux",
+  "tig": "~/.config/tig",
+  "wezterm": "~/.config/wezterm",
+  "git": "~/.config/git"
+}

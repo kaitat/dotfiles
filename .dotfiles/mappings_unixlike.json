@@ -1,0 +1,7 @@
+{
+  "aqua": "~/.config/aquaproj-aqua",
+  "nvim": "~/.config/nvim",
+  "fish": "~/.config/fish",
+  "bash/.bashrc": "~/.bashrc",
+  "bash/.bash_profile": "~/.bash_profile"
+}
