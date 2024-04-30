@@ -1,0 +1,55 @@
+export USER_NAME='kaitat'
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export LC_ALL='en_US.UTF-8'
+export LANG='ja_JP.UTF-8'
+
+export ARCH=$(uname -m)
+
+# xdg base directory
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# aqua
+export AQUA_ROOT_DIR="${XDG_DATA_HOME}/aquaproj-aqua"
+export AQUA_BIN_PATH="${AQUA_ROOT_DIR}/bin"
+export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME}/aquaproj-aqua/aqua.yaml"
+
+# go
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export GO111MODULE="on"
+
+# deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# xcode
+export XCODEBIN="/Applications/Xcode.app/Contents/Developer/usr/bin"
+
+# homebrew
+export HOMEBREW_X86_64_BIN="/usr/local/bin"
+export HOMEBREW_ARM_BIN="/opt/homebrew/bin"
+export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+export HOMEBREW_NO_ANALYTICS=1
+
+# curl
+export CURLBIN="/usr/local/opt/curl/bin"
+
+# script
+export LOCALBIN="$HOME/.local/bin"
+export SCRIPTS_PATH="$HOME/.scripts"
+
+# path
+PATH=${HOMEBREW_ARM_BIN}:${HOMEBREW_X86_64_BIN}:${LOCALBIN}:/usr/bin:/bin:/opt/local/sbin:${PATH}
+PATH=${GOBIN}:${GOPATH}:${PATH}:${SCRIPTS_PATH}:${AQUA_BIN_PATH}:${CURLBIN}:${XCODEBIN}
+
+
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export EDITOR="nvim"
+
