@@ -65,7 +65,7 @@ echo "-----installed homebrew-----"
 brew install fish curl
 
 # install brew package
-export HOMEBREW_BREWFILE="$HOME/.brewfile"
+# export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
 brew bundle --global
 brew reinstall fish
 echo "-----installed brew package-----"

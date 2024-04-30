@@ -35,7 +35,8 @@ export XCODEBIN="/Applications/Xcode.app/Contents/Developer/usr/bin"
 # homebrew
 export HOMEBREW_X86_64_BIN="/usr/local/bin"
 export HOMEBREW_ARM_BIN="/opt/homebrew/bin"
-export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+# 下から設定されてたから一旦コメントアウト
+# export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
 export HOMEBREW_NO_ANALYTICS=1
 
 # curl
