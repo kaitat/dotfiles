@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -euo pipefall
+set -euo pipefail
 
 # version
 GHQ_VERSION=1.6.1
@@ -38,34 +38,43 @@ fi
 # install aqua
 curl -sSfL "https://raw.githubusercontent.com/aquaproj/aqua-installer/${AQUA_VERSION}/aqua-installer" | bash
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
+echo "-----installed aqua-----"
 
 cd /tmp
 aqua init
 aqua g -i rhysd/dotfiles
 aqua g -i x-motemen/ghq
 aqua i -l
+
 ghq get kaitat/dotfiles
 DOTFILES_DIR=$(ghq root)/$(ghq list | grep kaitat/dotfiles)
 AQUA_GLOBAL_CONFIG_DIR=$DOTFILES_DIR/aqua
 AQUA_GLOBAL_CONFIG=$AQUA_GLOBAL_CONFIG_DIR/aqua.toml
 cd $AQUA_GLOBAL_CONFIG_DIR
 aqua install -l -a
+cd $DOTFILES_DIR
 dotfiles link .
 
+echo "-----installed dotfiles-----"
+
 # install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-source $DOTFILES_DIR/bash/.bash_profile
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+source $DOTFILES_DIR/bash/bash_profile
+echo "-----installed homebrew-----"
 
 brew install fish curl
 
-# install deps via brew
+# install brew package
 export HOMEBREW_BREWFILE="$HOME/.brewfile"
 brew bundle --global
 brew reinstall fish
+echo "-----installed brew package-----"
 
-# fisher
+# install fisher
 fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
 fish -c "fisher update"
 fish -c "fish_update_completions"
+echo "-----installed fish package-----"
 
 brew cleanup -s
+echo "-----🎉done🎂-----"
