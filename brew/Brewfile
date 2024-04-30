@@ -1,0 +1,13 @@
+tap "kaitat/neovim-nightly"
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+brew "fish"
+brew "tig"
+brew "git"
+brew "tmux"
+brew "lua"
+
+cask "wezterm"
+
+

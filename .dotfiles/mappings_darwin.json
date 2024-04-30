@@ -1,4 +1,4 @@
 {
-  "Brewfile": "~/.Brewfile",
+  "brew/Brewfile": "~/.Brewfile",
   "karabiner": "~/.config/karabiner"
 }
