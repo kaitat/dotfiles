@@ -1,0 +1,71 @@
+[core]
+  quotepath = false
+  editor = nvim
+  filemode  = false
+  ignorecase = false
+[user]
+  email = 50905693+kaitat@users.noreply.github.com
+  name = miyazaki.kaito
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+[commit]
+  template = ~/.stCommitMsg
+[alias]
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[init]
+  defaultBranch = main
+[url "github:"]
+    InsteadOf = https://github.com/
+    InsteadOf = git@github.com:
+[push]
+  default = current
+  autoSetupRemote = true
+[alias]
+  st = status -sb
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  difff = diff --word-diff
+  sh = show
+  so = remote show origin
+  ft = fetch
+  up = pull --rebase       # pull rebase
+  rbm = rebase master      # masterへのrebaseはよく使うのでalias
+  ad = add
+  ci = commit
+  cam = commit -a --amend  # 直前のcommitを修正
+  # branch関連
+  br = branch
+  ba = branch -a           # originも含めた全てのbranchを表示
+  bm = branch --merged     # merge済みのbranchを表示
+  bn = branch --no-merged  # mergeしてないbranchを表示
+  bo = branch -r
+  # log関連
+  wc = whatchanged         # logに変更されたファイルも一緒に出す
+  ls = log --stat          # logに変更されたファイルも一緒に出す
+  lp = log -p              # diffも一緒に出す
+  la = log --pretty=\"format:%ad %h (%an): %s\" --date=short  # ざっくりログ出す
+  lr = log origin          # originのlog
+  oneline = log --pretty=oneline
+  ranking = shortlog -s -n --no-merges
+  # logをtree表示
+  log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  log-al = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  log-a = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  # diff関連
+  logall = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  logal = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  loga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  lga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'        
+  df = diff
+  dif = diff
+[ghq]
+	root = ~/.local/share/ghq-src/
