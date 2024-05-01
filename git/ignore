@@ -1,0 +1,11 @@
+*~
+.DS_Store
+jsconfig.json
+tags
+node_modules
+*.http
+.sync
+symfony
+test.tsx
+.node-version
+.next
