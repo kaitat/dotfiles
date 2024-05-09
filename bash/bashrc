@@ -46,11 +46,14 @@ export CURLBIN="/usr/local/opt/curl/bin"
 export LOCALBIN="$HOME/.local/bin"
 export SCRIPTS_PATH="$HOME/.scripts"
 
+# dotfile
+export DOTFILES_REPO_PATH="${XDG_DATA_HOME}/ghq-src/github.com/kaitat/dotfiles"
+
 # path
 PATH=${HOMEBREW_ARM_BIN}:${HOMEBREW_X86_64_BIN}:${LOCALBIN}:/usr/bin:/bin:/opt/local/sbin:${PATH}
 PATH=${GOBIN}:${GOPATH}:${PATH}:${SCRIPTS_PATH}:${AQUA_BIN_PATH}:${CURLBIN}:${XCODEBIN}
 
-
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export EDITOR="nvim"
 
+echo "read bashrc"
