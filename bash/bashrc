@@ -56,3 +56,4 @@ PATH=${GOBIN}:${GOPATH}:${PATH}:${SCRIPTS_PATH}:${AQUA_BIN_PATH}:${CURLBIN}:${XC
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export EDITOR="nvim"
 
+echo "read bashrc"
