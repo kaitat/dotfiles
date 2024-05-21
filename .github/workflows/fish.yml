@@ -3,13 +3,13 @@ on:
   push:
     paths:
       - fish/**
-      - .github/workflows/fish.yaml
+      - .github/workflows/fish.yml
   pull_request:
     paths:
-      - aqua/
-      - .github/workflows/fish.yaml
+      - fish/**
+      - .github/workflows/fish.yml
 jobs:
-  fich:
+  fish:
     strategy:
       matrix:
         os:

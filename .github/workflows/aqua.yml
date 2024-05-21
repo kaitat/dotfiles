@@ -3,11 +3,11 @@ on:
   push:
     paths:
       - aqua/**
-      - .github/workflows/aqua.yaml
+      - .github/workflows/aqua.yml
   pull_request:
     paths:
       - aqua/
-      - .github/workflows/aqua.yaml
+      - .github/workflows/aqua.yml
 jobs:
   aqua:
     strategy:
@@ -16,13 +16,13 @@ jobs:
           - ubuntu-latest
     runs-on: ${{ matrix.os }}
     env:
-      AQUA_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
+      AQUA_CONFIG: aqua/aqua.yaml
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: switch
         uses: actions/checkout@v4
       - name: isntall aqua tool
-        uses: aquaproj/aqua-installer@v3.0.0
+        uses: aquaproj/aqua-installer@v3.0.1
         with:
           aqua_version: v2.28.1
           policy_allow: "true"
