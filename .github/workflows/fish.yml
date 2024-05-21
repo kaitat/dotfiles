@@ -3,11 +3,11 @@ on:
   push:
     paths:
       - fish/**
-      - .github/workflows/fish.yaml
+      - .github/workflows/fish.yml
   pull_request:
     paths:
       - fish/**
-      - .github/workflows/fish.yaml
+      - .github/workflows/fish.yml
 jobs:
   fich:
     strategy:

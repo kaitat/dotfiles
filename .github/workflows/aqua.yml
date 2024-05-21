@@ -3,11 +3,11 @@ on:
   push:
     paths:
       - aqua/**
-      - .github/workflows/aqua.yaml
+      - .github/workflows/aqua.yml
   pull_request:
     paths:
       - aqua/
-      - .github/workflows/aqua.yaml
+      - .github/workflows/aqua.yml
 jobs:
   aqua:
     strategy:
