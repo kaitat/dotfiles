@@ -6,7 +6,7 @@ on:
       - .github/workflows/fish.yaml
   pull_request:
     paths:
-      - aqua/
+      - fish/**
       - .github/workflows/fish.yaml
 jobs:
   fich:
