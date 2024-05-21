@@ -9,7 +9,7 @@ on:
       - fish/**
       - .github/workflows/fish.yml
 jobs:
-  fich:
+  fish:
     strategy:
       matrix:
         os:
