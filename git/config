@@ -37,6 +37,7 @@
   so = remote show origin
   ft = fetch
   up = pull --rebase       # pull rebase
+  pushf = push --force-with-lease --force-if-includes
   rbm = rebase master      # masterへのrebaseはよく使うのでalias
   ad = add
   ci = commit
