@@ -1,0 +1,32 @@
+[colors]
+#foreground = "#cdcecf"
+#background = "#192330"
+#cursor_bg = "#cdcecf"
+#cursor_border = "#cdcecf"
+#cursor_fg = "#192330"
+#selection_bg = "#2b3b51"
+#selection_fg = "#cdcecf"
+#ansi = ["#393b44", "#c94f6d", "#81b29a", "#dbc074", "#719cd6", "#9d79d6", "#63cdcf", "#dfdfe0"]
+#brights = ["#575860", "#d16983", "#8ebaa4", "#e0c989", "#86abdc", "#baa1e2", "#7ad4d6", "#e4e4e5"]
+
+foreground = "#c0caf5"
+background = "#24283b"
+cursor_bg = "#c0caf5"
+cursor_border = "#c0caf5"
+cursor_fg = "#24283b"
+selection_bg = "#364A82"
+selection_fg = "#c0caf5"
+
+ansi = ["#1D202F", "#f7768e", "#9ece6a", "#e0af68", "#7aa2f7", "#bb9af7", "#7dcfff", "#a9b1d6"]
+brights = ["#414868", "#f7768e", "#9ece6a", "#e0af68", "#7aa2f7", "#bb9af7", "#7dcfff", "#c0caf5"]
+
+#[ayu]
+#foreground = "#e6e1cf",
+#background = "black",
+#cursor_bg = "#f29718",
+#cursor_border = "#f29718",
+#cursor_fg = "#e6e1cf",
+#selection_bg = "#253340",
+#selection_fg = "#e6e1cf",
+#ansi = {"#000000","#ff3333","#b8cc52","#e7c547","#36a3d9","#f07178","#95e6cb","#ffffff"},
+#brights = {"#323232","#ff6565","#eafe84","#fff779","#68d5ff","#ffa3aa","#c7fffd","#ffffff"},
