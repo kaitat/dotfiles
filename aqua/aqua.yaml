@@ -20,3 +20,4 @@ packages:
 - name: golang/go@go1.22.3
 - name: BurntSushi/ripgrep@14.1.0
 - name: LuaLS/lua-language-server@3.9.1
+- name: aws/aws-cli@2.16.0
