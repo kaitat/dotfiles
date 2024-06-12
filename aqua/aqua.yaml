@@ -22,3 +22,4 @@ packages:
 - name: tfutils/tfenv@v3.0.0
 - name: aws/aws-cli@2.16.0
 - name: LuaLS/lua-language-server@3.9.2
+- name: sharkdp/hyperfine@v1.18.0
