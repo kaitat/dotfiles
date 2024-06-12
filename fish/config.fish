@@ -21,7 +21,7 @@ end
 # theme
 set -gx theme_nerd_fonts yes
 set -gx BIT_THEME monochrome
-source $FISH_CONFIG_DIR/themes/kanagawa.fish
+source $FISH_CONFIG_DIR/themes/nightfox.fish
 
 # general bin paths
 fish_add_path $HOME/.local/bin
