@@ -46,6 +46,7 @@ aqua g -i rhysd/dotfiles
 aqua g -i x-motemen/ghq
 aqua i -l
 
+git config --global ghq.root '~/.local/share/ghq-src'
 ghq get kaitat/dotfiles
 DOTFILES_DIR=$(ghq root)/$(ghq list | grep kaitat/dotfiles)
 AQUA_GLOBAL_CONFIG_DIR=$DOTFILES_DIR/aqua
