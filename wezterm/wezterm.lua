@@ -215,8 +215,8 @@ local local_config = load_local_config()
 --- Config
 ---------------------------------------------------------------
 local config = {
-	font = wezterm.font("Cica", {weight = "Bold"}),
-  --font = wezterm.font("Iosevka Nerd Font", {weight = "Bold"}),
+  -- font = wezterm.font("Cica", {weight = "Bold"}),
+  -- font = wezterm.font("Iosevka Nerd Font", {weight = "Bold"}),
 	use_ime = true,
 	font_size = 14.0,
 	color_scheme = "nordfox",
