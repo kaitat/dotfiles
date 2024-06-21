@@ -26,7 +26,7 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # volta
-export VOLTA_HOME="$HOME/.volta"
+export VOLTA_HOME="$XDG_DATA_HOME"/volta
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # xcode
