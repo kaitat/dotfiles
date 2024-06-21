@@ -10,6 +10,7 @@ brew "lua"
 brew "wget"
 brew "the_silver_searcher"
 brew "xdg-ninja"
+brew "sqlite3"
 
 cask "wezterm"
 cask "visual-studio-code"
