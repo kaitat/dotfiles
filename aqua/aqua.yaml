@@ -23,3 +23,5 @@ packages:
 - name: aws/aws-cli@2.17.0
 - name: LuaLS/lua-language-server@3.9.3
 - name: sharkdp/hyperfine@v1.18.0
+- name: oven-sh/bun@bun-v1.1.13
+- name: mattn/efm-langserver@v0.0.53
