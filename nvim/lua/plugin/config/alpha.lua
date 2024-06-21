@@ -12,7 +12,7 @@ return  {
     -- dashboard.section.header.val = vim.fn.readfile(vim.fn.expand("~/.config/nvim/lua/files/dashboard_custom_header.txt"))
     dashboard.section.buttons.val = {
       dashboard.button("e", " New file", ":enew<CR>"),
-      dashboard.button("f", " Find file", ":Telescope smart_open<CR>"),
+      dashboard.button("f", " Find file", ":Telescope find_files<CR>"),
 			dashboard.button("s", "  Restore Session", '<cmd>lua require("persistence").load()<cr>'),
       dashboard.button("o", " Old Session file", ":Telescope oldfiles<CR>"),
       dashboard.button("b", " Jump to bookmarks", ":Telescope marks<CR>"),

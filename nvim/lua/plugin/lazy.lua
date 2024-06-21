@@ -14,9 +14,10 @@ vim.opt.runtimepath:prepend(lazypath)
 
 local lazy = require("lazy")
 -- load plugins
-lazy.setup("plugin.config", {
+lazy.setup({
         spec = {
-                { import = "plugin" },
+                { import = "plugin.config" },
+                { import = "cli" },
         },
         dev = {
                 path = "~/.local/share/ghq-src/github.com/kaitat",

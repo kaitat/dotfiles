@@ -12,11 +12,12 @@ return {
   end,
   keys = {
     { "<Plug>(copilot-dummy-map)", [[copilot#Accept"]("<Tab>")]], mode = "i", expr = true },
-    { "<C-b>", [[copilot#Accept("<CR>")]], mode = "i", expr = true },
+    { "<Space><Tab>", [[copilot#Accept("<CR>")]], mode = "i", expr = true },
     -- { "<Space>cc", [[copilot#Dismiss()]], mode = "i", script = true, nowait = true, expr = true },
   },
 }
 
+  
 
 -- local has_cmp = function()
 -- 	return require("core.plugin").has("nvim-cmp")

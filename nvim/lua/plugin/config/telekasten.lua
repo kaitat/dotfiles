@@ -1,4 +1,4 @@
-local home = vim.fn.expand('~/zettelkasten')
+local home = vim.fn.expand('~/.local/share/ghq-src/github.com/kaitat/mynote')
 local templ_dir = vim.fn.stdpath("config") .. "/zettelkasten/templates"
 
 return {
