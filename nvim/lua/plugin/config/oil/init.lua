@@ -42,7 +42,7 @@ return {
 				["gp"] = custom_actions.weztermPreview,
 				["g<leader>"] = custom_actions.openWithQuickLook,
 				["<esc>"] = "actions.close",
-				["q"] = nil,
+				["q"] = "actions.close",
 				["<C-l>"] = "actions.refresh",
 				["_"] = "actions.open_cwd",
 				["`"] = "actions.cd",

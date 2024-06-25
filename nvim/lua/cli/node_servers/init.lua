@@ -1,6 +1,7 @@
 return {
 	name = "node_servers",
 	dir = vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":h"),
+  cond = not is_vscode(),
 	build = "bun install",
 	config = function(spec)
 		local dir = spec.dir

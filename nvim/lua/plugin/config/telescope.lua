@@ -33,6 +33,7 @@ return {
 		keys = {
 			{ "tel", "Telescope", mode = "ca" },
 		},
+		cond = not is_vscode(),
 		config = function()
 			local function telescope_grep_any()
 				local builtin = require("telescope.builtin")

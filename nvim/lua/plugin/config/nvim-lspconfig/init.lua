@@ -7,7 +7,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile", "VeryLazy" },
-		cond = not is_vscode(),
+		-- cond = not is_vscode(),
 		dependencies = {
 			"folke/neoconf.nvim",
 			"b0o/schemastore.nvim",
