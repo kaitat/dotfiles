@@ -96,7 +96,8 @@ return {
 			if luasnip_status then
 				return tb(luasnip.jumpable(dir))
 			elseif denippet ~= nil then
-				return tb(denippet.jumpable(dir))
+        return false
+				-- return tb(denippet.jumpable(dir))
 			end
 			return false
 		end
@@ -174,7 +175,9 @@ return {
 						cmp.complete()
 					elseif enabled_copilot_vim() then
 						-- vim.api.nvim_feedkeys(vimx.fn.copilot.Accept(t("<Tab>")), "n", true)
-						feedkey(vimx.fn.copilot.Accept(t("<Tab>")), "n")
+            -- feedkey("<Plug>(denippet-choice-prev)", "i")
+						-- feedkey(vimx.fn.copilot.Accept(t("<Tab>")), "n")
+            fallback()
 					else
 						fallback()
 					end
