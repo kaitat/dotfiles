@@ -34,6 +34,10 @@ fish_add_path /usr/local/opt/curl/bin
 set -gx GOPATH $HOME/go
 fish_add_path $GOPATH/bin
 
+# # volta
+# set -gx VOLTA_HOME $XDG_DATA_HOME/volta
+# fish_add_path $VOLTA_HOME/bin
+
 # user scripts
 fish_add_path $HOME/.scripts
 fish_add_path $HOME/.scripts/bin
