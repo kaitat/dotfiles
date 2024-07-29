@@ -25,3 +25,4 @@ packages:
 - name: sharkdp/hyperfine@v1.18.0
 - name: oven-sh/bun@bun-v1.1.13
 - name: mattn/efm-langserver@v0.0.53
+- name: kayac/ecspresso@v2.3.5
