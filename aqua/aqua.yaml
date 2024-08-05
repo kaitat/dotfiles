@@ -8,20 +8,20 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.196.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.208.1 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: volta-cli/volta@v1.1.1
-- name: junegunn/fzf@0.53.0
-- name: x-motemen/ghq@v1.6.1
+- name: junegunn/fzf@v0.54.3
+- name: x-motemen/ghq@v1.6.2
 - name: rhysd/dotfiles@v0.2.3
-- name: cli/cli@v2.51.0
-- name: denoland/deno@v1.44.4
-- name: junegunn/fzf/fzf-tmux@0.53.0
-- name: golang/go@go1.22.4
+- name: cli/cli@v2.54.0
+- name: denoland/deno@v1.45.5
+- name: junegunn/fzf/fzf-tmux@v0.54.3
+- name: golang/go@go1.22.5
 - name: BurntSushi/ripgrep@14.1.0
 - name: tfutils/tfenv@v3.0.0
-- name: aws/aws-cli@2.17.0
-- name: LuaLS/lua-language-server@3.9.3
+- name: aws/aws-cli@2.17.21
+- name: LuaLS/lua-language-server@3.10.0
 - name: sharkdp/hyperfine@v1.18.0
 - name: oven-sh/bun@bun-v1.1.13
 - name: mattn/efm-langserver@v0.0.53
