@@ -20,6 +20,6 @@ packages:
 - name: golang/go@go1.23.0
 - name: BurntSushi/ripgrep@14.1.0
 - name: tfutils/tfenv@v3.0.0
-- name: aws/aws-cli@2.17.31
+- name: aws/aws-cli@2.17.32
 - name: LuaLS/lua-language-server@3.10.4
 - name: sharkdp/hyperfine@v1.18.0
