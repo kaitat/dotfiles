@@ -18,7 +18,7 @@ packages:
 - name: denoland/deno@v1.46.3
 - name: junegunn/fzf/fzf-tmux@v0.55.0
 - name: golang/go@go1.23.1
-- name: BurntSushi/ripgrep@14.1.0
+- name: BurntSushi/ripgrep@14.1.1
 - name: tfutils/tfenv@v3.0.0
 - name: aws/aws-cli@2.17.46
 - name: LuaLS/lua-language-server@3.10.5
