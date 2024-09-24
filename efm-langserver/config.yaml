@@ -1,0 +1,196 @@
+version: 2
+log-level: 1
+root-markers:
+- .git/
+- package.json
+
+tools:
+  stylua: &stylua
+    format-command: "stylua -s --color Never -"
+    format-stdin: true
+    require-marker: true
+    root-markers:
+      - stylua.toml
+      - .stylua.toml
+
+  golint: &golint
+    lint-command: 'golint - '
+    lint-stdin: true
+    lint-formats:
+      - '%.%#:%l:%c: %m' 
+    require-marker: true
+    root-markers:
+      - go.mod
+      - go.sum
+
+  gofmt: &gofmt
+    format-command: "gofmt"
+    format-stdin: true
+    require-marker: true
+    root-markers:
+      - go.mod
+      - go.sum
+
+  golines: &golines
+    format-command: "golines"
+    format-stdin: true
+    require-marker: true
+    root-markers:
+      - go.mod
+      - go.sum
+
+  goimports: &goimports
+    format-command: "goimports"
+    format-stdin: true
+    require-marker: true
+    root-markers:
+      - go.mod
+      - go.sum
+
+  prettier: &prettier
+    format-command: >
+      ./node_modules/.bin/prettier --stdin --stdin-filepath ${INPUT} 
+        # ${--range-start:charStart} \
+        # ${--range-end:charEnd} \
+        # ${--tab-width:tabSize} \
+        # ${--use-tabs:!insertSpaces}
+    format-stdin: true
+    format-can-range: true
+    require-marker: true
+    root-markers:
+      - .prettierrc
+      - .prettierrc.json
+      - .prettierrc.js
+      - .prettierrc.yml
+      - .prettierrc.yaml
+      - .prettierrc.json5
+      - .prettierrc.mjs
+      - .prettierrc.cjs
+      - .prettierrc.toml
+
+  biome: &biome
+    format-command: './node_modules/.bin/biome format --stdin-file-path ${INPUT}'
+    format-stdin: true
+    require-marker: true
+    root-markers:
+      - biome.json
+      - rome.json
+
+  fish_indent: &fish_indent
+    format-command: "fish_indent"
+    format-stdin: true
+
+  fish_diagnostics: &fish_diagnostics
+    lint-command: "fish --no-execute ${INPUT}"
+    lint-stdin: true
+    lint-ignore-exit-code: true
+    lint-formats:
+      - '%.%#(line %l): %m'
+
+  actionlint-lint: &actionlint-lint
+    prefix: actionlint
+    lint-command: "bash -c \"[[ '${INPUT}' =~ \\\\.github/workflows/ ]]\" && actionlint -oneline -no-color -"
+    lint-stdin: true
+    lint-formats:
+      - "%f:%l:%c: %m"
+    root-markers:
+      - .github
+
+  fixjson: &fixjson
+    format-command: bun x fixjson --stdin-filename ${INPUT}
+    format-stdin: true
+
+  textlint: &textlint
+    lint-command: 'bun x textlint -f unix --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l:%c: %m [%trror/%r]'
+    root-markers:
+      - .textlintrc
+      - .git
+
+languages:
+  # lua
+  lua:
+    - <<: *stylua
+
+  # go
+  go:
+    - <<: *golint
+    - <<: *gofmt
+    - <<: *golines
+    - <<: *goimports
+
+  # web
+  ## markup
+  html:
+    - <<: *prettier
+  svelte:
+    - <<: *prettier
+  vue:
+    - <<: *prettier
+  astro:
+    - <<: *prettier
+    - <<: *biome
+  javascriptreact:
+    - <<: *prettier
+    - <<: *biome
+  javascript.jsx:
+    - <<: *prettier
+    - <<: *biome
+  typescriptreact:
+    - <<: *prettier
+    - <<: *biome
+  typescript.tsx:
+    - <<: *prettier
+    - <<: *biome
+  markdown:
+    # - <<: *prettier
+    - <<: *textlint
+  markdown.mdx:
+    # - <<: *prettier
+    - <<: *textlint
+  ## styles
+  css:
+    - <<: *prettier
+  scss:
+    - <<: *prettier
+  less:
+    - <<: *prettier
+  ## scripts
+  javascript:
+    - <<: *prettier
+    - <<: *biome
+  typescript:
+    - <<: *prettier
+    - <<: *biome
+  ## other
+  graphql:
+    - <<: *prettier
+  # handlebars:
+  #   - <<: *prettier
+
+  # config
+  json:
+    - <<: *fixjson
+    - <<: *prettier
+    - <<: *biome
+  jsonc:
+    - <<: *prettier
+    - <<: *biome
+  json5:
+    - <<: *prettier
+    - <<: *biome
+  yaml:
+    - <<: *prettier
+    - <<: *actionlint-lint
+
+  # shell
+  fish:
+    - <<: *fish_diagnostics
+    - <<: *fish_indent
+
+  # docker
+  # dockerfile:
+  #   - <<: *hadolint

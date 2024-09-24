@@ -9,6 +9,7 @@ local filetypes = vim.iter({
 		"go",
 		"rust",
 		"swift",
+    "prettier"
 	},
 	{ "dockerfile" },
 	ft.config_like,
@@ -23,7 +24,7 @@ local filetypes = vim.iter({
 ---@type LazySpec
 return {
 	name = "efm",
-	dir = "",
+  dir = "",
 	dependencies = { "neovim/nvim-lspconfig" },
 	ft = filetypes,
 	opts = {

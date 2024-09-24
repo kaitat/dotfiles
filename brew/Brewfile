@@ -21,3 +21,6 @@ cask "karabiner-elements"
 cask "docker"
 cask "google-japanese-ime"
 
+vscode "editorconfig.editorconfig"
+vscode "esbenp.prettier-vscode"
+vscode "dbaeumer.vscode-eslint"

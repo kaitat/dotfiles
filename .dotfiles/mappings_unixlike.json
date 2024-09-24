@@ -3,5 +3,6 @@
   "nvim": "~/.config/nvim",
   "fish": "~/.config/fish",
   "bash/bashrc": "~/.bashrc",
-  "bash/bash_profile": "~/.bash_profile"
+  "bash/bash_profile": "~/.bash_profile",
+  "efm-langserver": "~/.config/efm-langserver"
 }
