@@ -12,7 +12,7 @@ registries:
 packages:
 - name: volta-cli/volta@v2.0.1
 - name: junegunn/fzf@v0.56.0
-- name: x-motemen/ghq@v1.6.3
+- name: x-motemen/ghq@v1.7.0
 - name: rhysd/dotfiles@v0.2.3
 - name: cli/cli@v2.61.0
 - name: denoland/deno@v2.0.5
