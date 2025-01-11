@@ -24,7 +24,7 @@ jobs:
       - name: isntall aqua tool
         uses: aquaproj/aqua-installer@v3.1.0
         with:
-          aqua_version: v2.42.1
+          aqua_version: v2.42.2
           policy_allow: "true"
         env:
           AQUA_LOG_COLOR: always
