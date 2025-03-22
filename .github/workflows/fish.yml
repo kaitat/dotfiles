@@ -29,7 +29,7 @@ jobs:
         env:
           AQUA_LOG_COLOR: always
       - name: installw fish
-        uses: fish-actions/install-fish@v1.1.0
+        uses: fish-actions/install-fish@v1.2.0
       - name: link dotfiles
         run: dotfiles link .
       - name: exec fish
