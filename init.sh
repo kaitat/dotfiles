@@ -3,9 +3,9 @@
 set -euo pipefail
 
 # version
-GHQ_VERSION=1.6.1
+GHQ_VERSION=1.8.1
 DOTFILES_VERSION=v0.0.1
-AQUA_VERSION=v3.0.1
+AQUA_VERSION=v3.1.2
 
 # xdg base directory
 XDG_CONFIG_HOME=$HOME/.config
