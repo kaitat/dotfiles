@@ -58,7 +58,7 @@ if type -q nvim
     set -gx MANPAGER "nvim -c ASMANPAGER -"
 end
 
-if status is-interactive
-    stty stop undef &
-    stty start undef &
-end
+#if status is-interactive
+#    stty stop undef &
+#    stty start undef &
+#end
