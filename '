@@ -16,7 +16,8 @@ local lazy = require("lazy")
 -- load plugins
 lazy.setup({
         spec = {
-          { import = "plugin.config" },
+                { import = "plugin.config" },
+                { import = "plugin.config-not-vscode" } if not is_vscode(),
         },
         dev = {
                 path = "~/.local/share/ghq-src/github.com/kaitat",

@@ -152,7 +152,7 @@ function M.get_current_ufn()
 end
 
 function M.redetect_filetype()
-  vim.bo.filetype = vim.bo.filetype
+  -- vim.bo.filetype = vim.bo.filetype
 end
 
 function M.repeat_element(x, n)
